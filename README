@@ -1,8 +1,0 @@
-Command to generate tags:
-ctags -R -f ~/.vim/systags --c-kinds=+p --fields=+iaS --extra=+q /usr/include /usr/local/include
-
-plugins which are not in use in eclim are:
-pyclewn project
-
-plugins which are untapped:
-exutility refactor fugitive zencoding-vim indexer
