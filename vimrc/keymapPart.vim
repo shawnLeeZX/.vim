@@ -28,8 +28,10 @@ vnoremap <Leader>y "+y
 nnoremap <Leader>p "+p
 vnoremap <Leader>p "+p
 vnoremap <Leader>d "+d
-"changed autoclose.vim toggle auto close on or off key mapping
-nmap <Leader>t <Plug>ToggleAutoCloseMappings
+"Changed autoclose.vim toggle auto close on or off key mapping
+"Since autoclose.vim is replaced by Townk-vim-autoclose, so comment the key map
+"for it.
+"nmap <Leader>t <Plug>ToggleAutoCloseMappings
 "=======================================================
 
 "=======================================================
@@ -51,6 +53,7 @@ nnoremap <F9> :!cscope -b ../include/*.h ./*.cpp ./*.c<CR>:cs add cscope.out<CR>
 "
 "=======================================================
 "quick quick fix key bindings
+"map <C-S-n> :cc<CR> do not work, so comment it and use command directly instead.
 nnoremap <C-N> :cn<CR>
 nnoremap <C-P> :cp<CR>
 "=======================================================

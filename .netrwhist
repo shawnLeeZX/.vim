@@ -1,6 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/artemiz/.cscope.vim'
 let g:netrw_dirhist_2='/home/artemiz/tmp/pyclewn-ex/src'
 let g:netrw_dirhist_3='/home/artemiz/tmp/pyclewn-ex/include'
 let g:netrw_dirhist_4='/home/artemiz/tmp'
+let g:netrw_dirhist_5='/home/artemiz/.startupScript'
+let g:netrw_dirhist_6='/home/artemiz'
+let g:netrw_dirhist_7='/home/artemiz/.cscope.vim'
+let g:netrw_dirhist_8='/windows/out_of_mediocrity/curriculum_materials/architecture/architecture'
+let g:netrw_dirhist_9='/windows/out_of_mediocrity/computer/os/linux/linux/vim/vim_plugin/pyflakes-vim/ftplugin/python/pyflakes'
