@@ -1,1 +1,2 @@
-let g:indexer_indexerListFilename=./.vimprojects
+"Does not work.
+"let g:indexer_projectsSettingsFilename="./.vimprojects"

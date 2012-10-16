@@ -12,11 +12,13 @@
 "=======================================================
 "nnoremap <Tab> i<Tab><Esc>
 "nnoremap <Space> <PageDown>
-nnoremap <Enter> i<Enter><Esc>
+"nnoremap <Enter> i<Enter><Esc>
 "=======================================================
 
 "=======================================================
 "quick file operation
+"quick select all
+nnoremap <C-A> ggVG
 "quick close windows
 nnoremap <Leader>a :qa<CR>
 nnoremap <Leader>e :q!<CR>
@@ -40,6 +42,8 @@ vnoremap <Leader>d "+d
 "acquired a plugin to complete all autocompleted only tapping tab, so comment
 "this key binding
 "inoremap <F2> <C-X><C-O>
+"toggle tagbar
+nnoremap <F3> :TagbarToggle<CR>
 "toggle eclipse project tree
 nnoremap <C-F3> :ProjectTreeToggle<CR>
 "toggle visual undo tree
@@ -48,7 +52,9 @@ nnoremap <F8> :GundoToggle<Enter>
 "Since I have found a more powerfully plugin--easytag.vim to get ctags work,
 "comment the mapping. 
 "nnoremap <C-F9> :!ctags -R --c-kinds=+p --fields=+iaS --extra=+q ..<Cr>
-nnoremap <F9> :!cscope -b ../include/*.h ./*.cpp ./*.c<CR>:cs add cscope.out<CR>
+"generate cscope database should be specific according to filetype. Found them
+"in ftplugin
+"nnoremap <F9> :!cscope -b ../include/*.h ./*.cpp ./*.c<CR>:cs add cscope.out<CR>
 "=======================================================
 "
 "=======================================================
