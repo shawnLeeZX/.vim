@@ -140,7 +140,7 @@ if (! exists("no_plugin_maps") || ! no_plugin_maps) &&
 
   if ! g:LookupFile_DisableDefaultMap
     if !hasmapto('<Plug>LookupFile', 'n')
-      nmap <unique> <silent> <F5> <Plug>LookupFile
+      "nmap <unique> <silent> <F5> <Plug>LookupFile
     endif
     if !hasmapto('<Plug>LookupFile', 'i')
       inoremap <Plug>LookupFileCE <C-E>
