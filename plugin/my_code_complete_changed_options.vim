@@ -1,1 +1,1 @@
-let g:completekey = "<Leader>n"   "hotkey
+let g:completekey = "<Leader>f"   "hotkey
