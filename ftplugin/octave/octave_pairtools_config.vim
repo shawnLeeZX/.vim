@@ -15,7 +15,7 @@ let g:pairtools_octave_jigsaw    = 1
 " Configure PairClamp
 let g:pairtools_octave_autoclose  = 1
 let g:pairtools_octave_forcepairs = 0
-let g:pairtools_octave_closepairs = "(:),[:],{:},':',\":\""
+let g:pairtools_octave_closepairs = "(:),[:],{:},\":\""
 let g:pairtools_octave_smartclose = 1
 let g:pairtools_octave_smartcloserules = '\w,(,&,\*'
 let g:pairtools_octave_apostrophe = 0
