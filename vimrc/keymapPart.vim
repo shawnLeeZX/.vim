@@ -21,7 +21,7 @@
 nnoremap <C-A> ggVG
 "quick close windows
 nnoremap <Leader>a :qa<CR>
-nnoremap <Leader>e :q!<CR>
+" nnoremap <Leader><ESC> :q!<CR>
 nnoremap <Leader>q :q<CR>
 "quick save
 nnoremap <Leader>w :w<CR>
