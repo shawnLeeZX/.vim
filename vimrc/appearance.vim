@@ -19,3 +19,11 @@ colorscheme default "set the color scheme
 set nowrap "no auto wrap
 set shiftwidth=4 "make (auto)indent equate to four space
 set tabstop=4 "make a tab equate to four space
+
+" show tab as ^I
+" $ is displayed at the end of each line
+set list
+
+" tab will be displayed as "|---" (with more or less "-")
+" trailing white space will be displayed as "."
+set listchars=tab:\|-,trail:.
