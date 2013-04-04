@@ -1,9 +1,21 @@
-"initially I add this to get auto completion for library function.
-"however, without such tag, the completion list is more neat and enough to use.
-"So I commment it.
-"And this show me how to add extra tags, so I leave the configuration statement
-"here.
-"
-"Command to generate tags:
-"ctags -R -f ~/.vim/systags --c-kinds=+p --fields=+iaS --extra=+q /usr/include /usr/local/include
-"set tags+=~/.vim/tags/systags
+" Explanation could be found at linux/vim/learning_process/ctags
+" configure tags - add additional tags here or comment out not-used ones
+set tags+=~/.vim/tags/cpp
+set tags+=~/.vim/tags/gl
+set tags+=~/.vim/tags/sdl
+set tags+=~/.vim/tags/qt4
+" build tags of your own project with Ctrl-F12
+map <C-F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+" OmniCppComplete
+let OmniCpp_NamespaceSearch = 1
+let OmniCpp_GlobalScopeSearch = 1
+let OmniCpp_ShowAccess = 1
+let OmniCpp_ShowPrototypeInAbbr = 1 " show function parameters
+let OmniCpp_MayCompleteDot = 1 " autocomplete after .
+let OmniCpp_MayCompleteArrow = 1 " autocomplete after ->
+let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
+let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
+" automatically open and close the popup menu / preview window
+au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+set completeopt=menuone,menu,longest,preview
