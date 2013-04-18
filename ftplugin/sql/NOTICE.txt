@@ -1,0 +1,1 @@
+I have added a line at the end of .vim/autoload/sqlcomplete.vim, which is SQLSetType mysql.vim to tell vim to load the corresponding file for mysql.
