@@ -15,7 +15,7 @@ let g:pairtools_sql_jigsaw    = 1
 " Configure PairClamp
 let g:pairtools_sql_autoclose  = 1
 let g:pairtools_sql_forcepairs = 0
-let g:pairtools_sql_closepairs = "(:),[:],{:},':',\":\""
+let g:pairtools_sql_closepairs = "(:),[:],{:},':'"
 let g:pairtools_sql_smartclose = 1
 let g:pairtools_sql_smartcloserules = '\w,(,&,\*'
 let g:pairtools_sql_apostrophe = 0
