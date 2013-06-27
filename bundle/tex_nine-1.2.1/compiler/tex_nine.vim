@@ -46,7 +46,7 @@ CompilerSet errorformat=%E!\ LaTeX\ %trror:\ %m,
 	\%+Q[%\\d%*[^()])%r
 
 CompilerSet makeprg=
-let s:args = ' -file-line-error -interaction=nonstopmode'
+let s:args = ' -shell-escape -file-line-error -interaction=nonstopmode'
 
 let &l:makeprg = exists('g:tex_flavor') ? g:tex_flavor : 'latex'
 let &l:makeprg .= s:args

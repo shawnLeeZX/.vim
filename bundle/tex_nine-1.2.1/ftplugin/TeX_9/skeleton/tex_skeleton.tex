@@ -1,18 +1,31 @@
 % vim:tw=72 sw=2 ft=tex
 %         File: thoughts_report.tex
 % Date Created: 2013 Jun 18
-%  Last Change: 2013 Jun 19
+%  Last Change: 2013 Jun 27
 %       Author: hhiker
-\documentclass{article}
+\documentclass[a4paper]{article}
 \usepackage{xltxtra}
 \usepackage{xcolor}
 \usepackage{xeCJK}
-\setCJKmainfont{Adobe Song Std}
-\setmainfont{Adobe Garamond Pro}
+\usepackage{minted}
+\usepackage{booktabs}
+\usepackage{amsmath}
+ \usepackage[colorlinks=true,linkcolor=red]{hyperref}
+% \usepackage{hyperref}
+\usepackage{varioref}
+\usepackage{cleveref}
+\newcommand{\head}[1]{\textbf{#1}}
+\setCJKmainfont[BoldFont=KaiTi,ItalicFont=SimSun]{KaiTi}
+\crefname{figure}{图}{图}
+\crefname{table}{表}{表}
 
-\title{title}
-\author{李帅\\lishuai918@gmail.com}
+\title{题目\\ \small ——副题目}
+\author{李帅\\PB10000313}
 
 \begin{document}
 \maketitle
+\tableofcontents
+\pagebreak
+
+
 \end{document}

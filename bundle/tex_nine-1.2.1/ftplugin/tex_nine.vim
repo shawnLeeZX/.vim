@@ -129,7 +129,7 @@ inoremap <buffer> <LocalLeader><LocalLeader> <LocalLeader>
 inoremap <buffer> <LocalLeader>K 
 inoremap <buffer> <LocalLeader>M \
 inoremap <buffer><expr> <LocalLeader>B tex_nine#Insert_snippet()
-imap <buffer><expr> <LocalLeader>R tex_nine#Smart_insert('\ref{')
+imap <buffer><expr> <LocalLeader>R tex_nine#Smart_insert('\cref{')
 imap <buffer><expr> <LocalLeader>C tex_nine#Smart_insert('\cite{', '\[cC]ite')
 
 " Greek
