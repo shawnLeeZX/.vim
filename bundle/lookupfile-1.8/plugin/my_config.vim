@@ -1,2 +1,2 @@
-nmap <unique> <silent> <Leader>l <Plug>LookupFile
-imap <unique> <silent> <Leader>l <C-O><Plug>LookupFile
+nmap <unique> <silent> <Leader>o <Plug>LookupFile
+imap <unique> <silent> <Leader>o <C-O><Plug>LookupFile
