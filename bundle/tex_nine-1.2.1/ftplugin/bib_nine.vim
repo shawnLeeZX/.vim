@@ -31,7 +31,7 @@ ru ftplugin/TeX_9/tex_nine_common.vim
 " ******************************************
 setlocal tw=0
 setlocal sts=2
-setlocal sw=2
+setlocal sw=8
 setlocal tabstop=8
 
 if !exists('g:tex_bibfiles')

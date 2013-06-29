@@ -152,4 +152,4 @@ endfunction
 "}}}
 "************************************************************************
 
-" vim: nowrap fdm=marker tw=72 fo=tcq
+" vim: nowrap fdm=marker tw=0 fo=tcq

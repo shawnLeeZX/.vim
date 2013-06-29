@@ -1,7 +1,7 @@
 % vim:tw=72 sw=2 ft=tex
 %         File: thoughts_report.tex
 % Date Created: 2013 Jun 18
-%  Last Change: 2013 Jun 27
+%  Last Change: 2013 Jun 28
 %       Author: hhiker
 \documentclass[a4paper]{article}
 \usepackage{xltxtra}
@@ -10,14 +10,18 @@
 \usepackage{minted}
 \usepackage{booktabs}
 \usepackage{amsmath}
- \usepackage[colorlinks=true,linkcolor=red]{hyperref}
+\usepackage{paralist}
+\usepackage[colorlinks=true,linkcolor=red]{hyperref}
 % \usepackage{hyperref}
 \usepackage{varioref}
 \usepackage{cleveref}
 \newcommand{\head}[1]{\textbf{#1}}
-\setCJKmainfont[BoldFont=KaiTi,ItalicFont=SimSun]{KaiTi}
+\setCJKmainfont[BoldFont=SimHei,ItalicFont=SimSun]{KaiTi}
 \crefname{figure}{图}{图}
 \crefname{table}{表}{表}
+\crefname{section}{节}节}
+\newtheorem{thm}{Theorem}
+\newtheorem{dfn}[thm]{Definition}
 
 \title{题目\\ \small ——副题目}
 \author{李帅\\PB10000313}
@@ -25,6 +29,9 @@
 \begin{document}
 \maketitle
 \tableofcontents
+\pagebreak
+\listoffigures
+\listoftables
 \pagebreak
 
 

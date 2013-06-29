@@ -5,7 +5,7 @@ RELEASE=$(PROG)-$(VERSION)
 VIMFILES:=$(shell find -name *.vim) 
 
 define VANILLA_SKELETON
-% vim:tw=72 sw=2 ft=tex
+% vim:tw=72 sw=8 ft=tex
 %         File: $${_file}
 % Date Created: $${_date_created}
 %  Last Change: 
