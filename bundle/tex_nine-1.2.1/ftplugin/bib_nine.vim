@@ -29,7 +29,7 @@ ru ftplugin/TeX_9/tex_nine_common.vim
 " ******************************************
 "               Variables
 " ******************************************
-setlocal tw=0
+setlocal tw=72
 setlocal sts=2
 setlocal sw=8
 setlocal tabstop=8

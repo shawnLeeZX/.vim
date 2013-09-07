@@ -372,7 +372,7 @@
 
         Example for anglophones: >
 
-                % vim:tw=66 sw=2 ft=tex spell spelllang=en
+                % vim:tw=72 sw=2 ft=tex spell spelllang=en
 <
         Notice that newer versions of Vim provide an option >
 

@@ -2427,4 +2427,4 @@ specify an input file name, TeX bases the output names on the file
 specification associated with the logical name TEX_OUTPUT, typically
 texput.log.
 
- vim:tw=78:ts=8:ft=help:norl:
+ vim:tw=72:ts=8:ft=help:norl:

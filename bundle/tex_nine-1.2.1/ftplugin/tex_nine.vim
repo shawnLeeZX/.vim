@@ -40,7 +40,7 @@ ru ftplugin/TeX_9/tex_nine_common.vim
 " Local settings & autocmds {{{1
 setlocal completeopt=longest,menuone 
 setlocal fo=tcq
-setlocal tw=0 sw=8
+setlocal tw=72 sw=8
 setlocal tabstop=8 
 setlocal notimeout 
 "setlocal whichwrap=b,s " For matching inline maths
