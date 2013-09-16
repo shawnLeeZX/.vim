@@ -112,6 +112,7 @@ endif
 "          Normal mode mappings
 " ******************************************
 noremap <buffer><silent> <F1> :call tex_nine#Insert_skeleton(b:tex_skeleton)<CR>
+noremap <buffer><silent> <F2> :call tex_nine#Insert_skeleton(b:beamer_skeleton)<CR>
 noremap <buffer><silent> <LocalLeader>V :call tex_nine#View_document()<CR>
 noremap <buffer><silent> <LocalLeader>U :call tex_nine#Setup_omni(g:tex_bibfiles, 1)<CR>
 noremap <buffer><silent> <LocalLeader>Q :copen<CR>

@@ -25,6 +25,7 @@
 
 let s:path = fnameescape(expand('<sfile>:h'))
 let b:tex_skeleton = fnameescape(s:path.'/skeleton/tex_skeleton.tex')
+let b:beamer_skeleton = fnameescape(s:path.'/skeleton/beamer_skeleton.tex')
 let b:tex_pymodules = fnameescape(s:path.'/pymodules')
 let b:tex_snippets = fnameescape(s:path.'/snippets/tex_snippets.snippets')
 let b:bib_snippets = fnameescape(s:path.'/snippets/bib_snippets.snippets')
