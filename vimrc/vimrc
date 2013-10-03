@@ -82,7 +82,7 @@ set nocp
 set timeoutlen=1000 " Make delay shorter when invoking external program, like fcitx
 set wrap
 set noignorecase
-colorscheme twilight
+colorscheme hhiker
 " make vim recognize Chinese
 "set fileencodings=utf-8,gb2312,gbk,gb18030set termencoding=utf-8
 "set encoding=prc
