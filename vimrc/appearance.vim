@@ -11,8 +11,8 @@ set foldmethod=syntax "set the foldmethod
 "===================================================================
 "statusline
 "make vim status line more informative
-" set laststatus=2
-" set t_Co=256
+set laststatus=2
+set t_Co=256
 
 " set statusline=   " clear the statusline for when vimrc is reloaded
 " set statusline+=%-3.3n\                      " buffer number
