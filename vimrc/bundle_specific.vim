@@ -63,3 +63,9 @@ let g:tlTokenList = ["FIXME", "TODO", "XXX", "DRAFT"]
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
 " ======================================================
+
+" For ~/.vim/bundle/neocomplete/
+" ======================================================
+let g:neocomplete#enable_at_startup = 1
+" ======================================================
+
