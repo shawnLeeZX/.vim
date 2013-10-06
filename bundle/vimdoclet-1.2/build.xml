@@ -1,0 +1,47 @@
+<project name="vimdoclet" default="jar" basedir=".">
+
+    <property environment="env" />
+
+    <property name="src.dir" value="${basedir}/src"/>
+    <property name="java.src.dir" value="${src.dir}/java"/>
+    <property name="build.dir" value="${basedir}/build"/>
+    <property name="jar" value="${build.dir}/${ant.project.name}.jar"/>
+
+    <target name="compile" 
+        description="Compiles all code">
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${build.dir}/classes"/>
+        <javac destdir="${build.dir}/classes"
+            debug="on">
+            <src path="${java.src.dir}"/>
+        </javac>
+    </target>
+
+    <target name="clean"
+        description="Removes all build artifacts">
+        <delete dir="${build.dir}" />
+    </target>
+
+    <target name="jar" depends="compile"
+        description="packages code in a jar file">
+        <jar destfile="${jar}"
+            basedir="${build.dir}/classes">
+        </jar>
+    </target>
+
+    <path id="javadoc.classpath">
+        <fileset dir="${build.dir}"> <include name="*.jar"/> </fileset>
+    </path>
+    <target name="test.run" depends="jar">
+        <delete dir="${build.dir}/test-output" />
+        <mkdir dir="${build.dir}/test-output" />
+        <javadoc maxmemory="512M" classpathref="javadoc.classpath">
+            <packageset dir="${basedir}/src/java" />
+            <doclet 
+                name="com.naildrivin5.applications.vimdoclet.Main"
+                pathref="javadoc.classpath">
+                <param name="-outputDir" value="${build.dir}/test-output" />
+            </doclet>
+        </javadoc>
+    </target>
+</project>
