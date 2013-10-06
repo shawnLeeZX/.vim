@@ -56,3 +56,10 @@ let g:SuperTabDefaultCompletionType = "context"
 " ======================================================
 let g:tlTokenList = ["FIXME", "TODO", "XXX", "DRAFT"]
 " ======================================================
+
+" For ~/.vim/bundle/syntastic/
+" ======================================================
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+" ======================================================
