@@ -41,8 +41,13 @@ let NERDSpaceDelims=1
 " ======================================================
  let g:languagetool_jar="/windows/out_of_mediocrity/computer/os/linux/linux/vim/vim_plugin/LanguageTool/LanguageTool.jar"
 " ======================================================
-"
+
 " For ~/.vim/bundle/supertab/
 " ======================================================
 let g:SuperTabDefaultCompletionType = "context"
+" ======================================================
+
+" For ~/.vim/bundle/better-snipmate-snippets/
+" ======================================================
+ let g:snips_author = 'HHiker'
 " ======================================================
