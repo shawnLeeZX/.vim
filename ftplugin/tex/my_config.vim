@@ -1,6 +1,6 @@
-set shiftwidth=8
+set shiftwidth=4
 set noexpandtab
-set tabstop=8
-set softtabstop=8
+set tabstop=4
+set softtabstop=4
 
 nnoremap <F5> :!bibtex <C-R>%<Backspace><Backspace><Backspace>aux<CR>
