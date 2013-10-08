@@ -39,7 +39,7 @@ let NERDSpaceDelims=1
 
 " For ~/.vim/bundle/LanguageTool/
 " ======================================================
- let g:languagetool_jar="/windows/out_of_mediocrity/computer/os/linux/linux/vim/vim_plugin/LanguageTool/LanguageTool.jar"
+let g:languagetool_jar="~/mine/software/LanguageTool-2.3/languagetool-commandline.jar"
 " ======================================================
 
 " For ~/.vim/bundle/supertab/
