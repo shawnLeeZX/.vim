@@ -15,7 +15,7 @@ let g:pairtools_pandoc_jigsaw    = 1
 " Configure PairClamp
 let g:pairtools_pandoc_autoclose  = 1
 let g:pairtools_pandoc_forcepairs = 0
-let g:pairtools_pandoc_closepairs = "(:),[:],{:},':',\":\""
+let g:pairtools_pandoc_closepairs = "(:),[:],{:},\":\""
 let g:pairtools_pandoc_smartclose = 1
 let g:pairtools_pandoc_smartcloserules = '\w,(,&,\*'
 let g:pairtools_pandoc_apostrophe = 0
