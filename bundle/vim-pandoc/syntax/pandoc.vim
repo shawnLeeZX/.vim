@@ -154,7 +154,7 @@ syn match pandocStrong /\(\*\*\)\([^\* ]\|[^\*]\( [^\*]\)\+\)\+\1/ contained con
 " Emphasis:
 "
 "Using underscores
-syn match pandocEmphasis /\(_\)\([^_ ]\|[^_]\( [^_]\)\+\)\+\1/ contained contains=@Spell skipnl
+" syn match pandocEmphasis /\(_\)\([^_ ]\|[^_]\( [^_]\)\+\)\+\1/ contained contains=@Spell skipnl
 "Using Asterisks
 syn match pandocEmphasis /\(\*\)\([^\* ]\|[^\*]\( [^\*]\)\+\)\+\1/ contained contains=@Spell skipnl
 """""""""""""""""""""""""""""""""""""""
