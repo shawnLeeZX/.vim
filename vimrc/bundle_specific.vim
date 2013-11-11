@@ -49,7 +49,7 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " For ~/.vim/bundle/better-snipmate-snippets/
 " ======================================================
- let g:snips_author = 'HHiker'
+ let g:snips_author = 'Shawn'
 " ======================================================
 
 " For ~/.vim/plugin/tasklist.vim
