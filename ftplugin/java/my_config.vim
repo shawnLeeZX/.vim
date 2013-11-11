@@ -15,3 +15,5 @@ set tags+=/windows/out_of_mediocrity/curriculum_materials/web/exp/materials/luce
 
 " For javadoc -- vimdoclet-1.2
 nnoremap K :help <C-R>=expand("<cword>")<CR><CR>
+
+setlocal omnifunc=javacomplete#Complete
