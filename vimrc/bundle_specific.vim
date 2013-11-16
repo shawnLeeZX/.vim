@@ -66,6 +66,6 @@ let g:tlTokenList = ["FIXME", "TODO", "XXX", "DRAFT"]
 
 " For ~/.vim/bundle/neocomplete/
 " ======================================================
-let g:neocomplete#enable_at_startup = 1
+let g:neocomplete#enable_at_startup = 0
 " ======================================================
 
