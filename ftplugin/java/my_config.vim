@@ -12,6 +12,7 @@ set tw=80  "auto change line when there are 80 characters of the line. But it do
 " Add tags for java api.
 set tags+=~/mine/software/jdk1.7.0_40/share/tags
 set tags+=/windows/out_of_mediocrity/curriculum_materials/web/exp/materials/lucene-4.4.0/lucene-4.4.0-src/tags
+set tags+=~/mine/software/tomcat/apache-tomcat-7.0.47-src/tags
 
 " For javadoc -- vimdoclet-1.2
 nnoremap K :help <C-R>=expand("<cword>")<CR><CR>
