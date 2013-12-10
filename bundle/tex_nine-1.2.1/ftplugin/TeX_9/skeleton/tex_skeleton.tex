@@ -1,7 +1,7 @@
 % vim:tw=72 sw=2 ft=tex
 %         File: thoughts_report.tex
 % Date Created: 2013 Jun 18
-%  Last Change: 2013 Jul 11
+%  Last Change: 2013 Dec 10
 %       Author: hhiker
 \documentclass[a4paper]{article}
 \usepackage{xltxtra}
@@ -20,8 +20,25 @@
 \crefname{figure}{图}{图}
 \crefname{table}{表}{表}
 \crefname{section}{节}{节}
-\newtheorem{thm}{Theorem}
-\newtheorem{dfn}[thm]{Definition}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newenvironment{proof}[1][Proof]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+\newcommand{\qed}{\nobreak \ifvmode \relax \else
+      \ifdim\lastskip<1.5em \hskip-\lastskip
+      \hskip1.5em plus0em minus0.5em \fi \nobreak
+      \vrule height0.75em width0.5em depth0.25em\fi}
 
 \title{题目\\ \small ——副题目}
 \author{李帅\\PB10000313}
