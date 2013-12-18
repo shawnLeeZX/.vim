@@ -1,25 +1,55 @@
 % vim:tw=72 sw=2 ft=tex
-%         File: ${_file}
-% Date Created: ${_date_created}
-%  Last Change: 
-%     Compiler: xelatex
-%       Author: ${_author}
-\documentclass[12pt,a4paper]{article}
-\usepackage{amsmath, amssymb}
-\usepackage{fontspec}
-\defaultfontfeatures{Ligatures=TeX}
-\usepackage[math-style=ISO,
-            bold-style=ISO]{unicode-math}
-\usepackage{polyglossia}
-\setdefaultlanguage{english}
+%         File: thoughts_report.tex
+% Date Created: 2013 Jun 18
+%  Last Change: 2013 Dec 10
+%       Author: hhiker
+\documentclass[a4paper]{article}
+\usepackage{xltxtra}
+\usepackage{xcolor}
+\usepackage{xeCJK}
+\usepackage{minted}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{paralist}
+\usepackage[colorlinks=true,linkcolor=red]{hyperref}
+% \usepackage{hyperref}
+\usepackage{varioref}
+\usepackage{cleveref}
+\newcommand{\head}[1]{\textbf{#1}}
+\setCJKmainfont[BoldFont=SimHei,ItalicFont=SimSun]{KaiTi}
+\crefname{figure}{图}{图}
+\crefname{table}{表}{表}
+\crefname{section}{节}{节}
 
-% The rest
-\usepackage{graphicx}
-\usepackage{booktabs, tabularx}
-\usepackage{url}
-\usepackage[super]{natbib}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newenvironment{proof}[1][Proof]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{definition}[1][Definition]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{example}[1][Example]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{remark}[1][Remark]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+\newcommand{\qed}{\nobreak \ifvmode \relax \else
+      \ifdim\lastskip<1.5em \hskip-\lastskip
+      \hskip1.5em plus0em minus0.5em \fi \nobreak
+      \vrule height0.75em width0.5em depth0.25em\fi}
+
+\title{题目\\ \small ——副题目}
+\author{李帅\\PB10000313}
 
 \begin{document}
+\maketitle
+\tableofcontents
+\pagebreak
+\listoffigures
+\listoftables
+\pagebreak
 
 
 \end{document}

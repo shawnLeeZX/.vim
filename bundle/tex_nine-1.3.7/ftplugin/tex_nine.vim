@@ -75,7 +75,8 @@ let g:maplocalleader = b:tex_nine_config.leader
 
 " Templates
 noremap <buffer><silent> <F1> :call tex_nine#InsertSkeleton(b:tex_nine_skeleton.'.xelatex')<CR>
-noremap <buffer><silent> <F2> :call tex_nine#InsertSkeleton(b:tex_nine_skeleton.'.pdflatex')<CR>
+" noremap <buffer><silent> <F2> :call tex_nine#InsertSkeleton(b:tex_nine_skeleton.'.pdflatex')<CR>
+noremap <buffer><silent> <F2> :call tex_nine#InsertSkeleton(b:tex_nine_skeleton.'.beamer')<CR>
 noremap <buffer><silent> <F3> :call tex_nine#InsertSkeleton(b:tex_nine_skeleton.'.latex')<CR>
 noremap <buffer><silent> <F4> :call tex_nine#InsertSkeleton(b:tex_nine_skeleton.'.make')<CR>
 
