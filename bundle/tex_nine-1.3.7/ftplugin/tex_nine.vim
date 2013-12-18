@@ -90,8 +90,8 @@ noremap <buffer><silent> <LocalLeader>K :call tex_nine#Compile(1, b:tex_nine_con
 " Misc
 noremap <buffer><silent> <LocalLeader>U :call tex_nine#Reconfigure(b:tex_nine_config)<CR>
 noremap <buffer><silent> <LocalLeader>Q :copen<CR>
-noremap <buffer><silent> <C-F>  :silent! /\(end{\)\@<!\(section\\|chapter\)<CR>
-noremap <buffer><silent> <C-B>  :silent! ?\(end{\)\@<!\(section\\|chapter\)<CR>
+" noremap <buffer><silent> <C-F>  :silent! /\(end{\)\@<!\(section\\|chapter\)<CR>
+" noremap <buffer><silent> <C-B>  :silent! ?\(end{\)\@<!\(section\\|chapter\)<CR>
 noremap <buffer><silent> gd yiB/\\label{<C-R>0}<CR>
 noremap <buffer><silent> gb :call tex_nine#Bibquery(expand('<cword>'))<CR>
 
