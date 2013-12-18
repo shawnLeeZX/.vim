@@ -1,6 +1,10 @@
-" For ~/.vim/bundle/tex_nine-1.2.1/
+" For ~/.vim/bundle/tex_nine-1.3.7/
 " ======================================================
 let g:tex_flavor = 'xelatex'
+let g:tex_nine_config = {
+    \'compiler': 'xelatex --shell-escape'
+\}
+
 " ======================================================
 
 " For ~/.vim/bundle/lookupfile-1.8/

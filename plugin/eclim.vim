@@ -173,6 +173,4 @@ endfunction " }}}
 
 call <SID>Init()
 
-source ~/.vim/ftplugin/java/my_config.vim
-
 " vim:ft=vim:fdm=marker
