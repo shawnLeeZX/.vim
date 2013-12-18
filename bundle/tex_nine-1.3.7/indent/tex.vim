@@ -3,20 +3,24 @@
 " Maintainer:   Johannes Tanzler <jtanzler@yline.com>
 " Created:      Sat, 16 Feb 2002 16:50:19 +0100
 " Last Change:	Sun, 17 Feb 2002 00:09:11 +0100
-" Last Update:  Oct 3, 2011
+" Last Update:  2013-08-06
 "               ET: Modified this script for TeX 9. Items are indented
 "               automatically.
-" Version: 1.2.1
+" Version: 1.3.7
+
+" Disable system wide indentation
+let b:did_indent = 1 
+
+" Control TeX-9 indentation
+if exists("b:did_tex_nine_indent") | finish
+endif
+let b:did_tex_nine_indent = 1
 
 setlocal indentexpr=TeXNineIndent()
 setlocal nolisp
 setlocal nosmartindent
 setlocal autoindent
 setlocal indentkeys+=},=\\item,=\\bibitem
-
-if exists("b:did_tex_nine_indent") | finish
-endif
-let b:did_tex_nine_indent = 1
 
 " Only define the function once
 if exists("*TeXNineIndent") | finish
@@ -39,9 +43,9 @@ function TeXNineIndent()
         return ind " Do not change indentation of commented lines.
     endif
 
-    let openingpat = '\\\(begin\|section\*\=\|paragraph\*\=\){\(.*\)}'  
-    let endpat = '\\\(end\|section\*\=\|paragraph\*\=\){\(.*\)}'
-    let excluded = 'document\|verbatim'
+    let openingpat = '\\\(begin\|section\*\=\|paragraph\*\=\)\(\[.\+\]\)\={\(.*\)}'
+    let endpat = '\\\(end\|section\*\=\|paragraph\*\=\)\(\[.\+\]\)\={\(.*\)}'
+    let excluded = 'begin{document}\|begin{verbatim}\|end{document}\|end{verbatim}'
 
     " Add/remove a 'shiftwidth' after an environment begins/ends.
     " Add an additional 'shiftwidth' when entering a list and when typing in
@@ -50,7 +54,7 @@ function TeXNineIndent()
         let ind += &sw
 
         " Add another sw for item-environments
-        if line =~ 'itemize\|description\|enumerate\|thebibliography'
+        if line =~ 'itemize\|description\|enumerate\|thebibliography\|parts'
             let ind += &sw
         endif
     endif
@@ -59,17 +63,17 @@ function TeXNineIndent()
     if cline =~ endpat && cline !~ excluded
         let ind -= &sw
         " Remove another sw for item-environments
-        if cline =~ 'itemize\|description\|enumerate\|thebibliography' 
+        if cline =~ 'itemize\|description\|enumerate\|thebibliography\|parts' 
             let ind -= &sw
         endif
     endif
 
     " Special treatment for 'item'
-    if cline =~ '^\s*\\\(bib\)\=item' 
+    if cline =~ '^\s*\\\(bib\)\=item\|^\s*\\part' 
         let ind -= &sw
     endif
 
-    if line =~ '^\s*\\\(bib\)\=item' 
+    if line =~ '^\s*\\\(bib\)\=item\|^\s*\\part' 
         let ind += &sw
     endif
 
