@@ -101,7 +101,7 @@ inoremap <buffer> <LocalLeader>K 
 inoremap <buffer> <LocalLeader>M \
 inoremap <buffer><expr> <LocalLeader>B tex_nine#InsertSnippet()
 imap <buffer><expr> <LocalLeader>E tex_nine#SmartInsert('\eqref{')
-imap <buffer><expr> <LocalLeader>R tex_nine#SmartInsert('\ref{')
+imap <buffer><expr> <LocalLeader>R tex_nine#SmartInsert('\cref{')
 imap <buffer><expr> <LocalLeader>C tex_nine#SmartInsert('\cite{', '\[cC]ite')
 
 " SyncTeX
