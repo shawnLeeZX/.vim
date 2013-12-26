@@ -26,6 +26,33 @@ snippet figure
       \end{center}
   \end{figure}
 
+# mfigure
+snippet mfigure
+  \begin{figure}
+  \minipage{0.6\textwidth}
+    \includegraphics[width=0.8\linewidth]{}
+    \caption{\label{fig:}}
+
+  \endminipage
+  \minipage{0.6\textwidth}
+    \includegraphics[width=0.8\linewidth]{}
+    \caption{\label{fig:}}
+
+  \endminipage\hfill
+  \\
+  \minipage{0.6\textwidth}
+    \includegraphics[width=0.8\linewidth]{}
+    \caption{\label{fig:}}
+
+  \endminipage
+  \minipage{0.6\textwidth}
+    \includegraphics[width=0.8\linewidth]{}
+    \caption{\label{fig:}}
+
+  \endminipage
+  \caption{\label{fig:}}
+  \end{figure}
+
 # equation
 snippet equation
   \begin{equation}
