@@ -9,6 +9,8 @@ augroup END
 " Octave syntax.
 augroup filetypedetect
   au! BufRead,BufNewFile *.m,*.oct set filetype=octave
+  au BufRead,BufNewFile *.pde set filetype=arduino
+  au BufRead,BufNewFile *.ino set filetype=arduino
 augroup END
 " Use keywords from Octave syntax language file for autocomplete 
 if has("autocmd") && exists("+omnifunc") 
