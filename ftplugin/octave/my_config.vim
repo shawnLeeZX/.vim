@@ -8,3 +8,8 @@ set tw=80  "auto change line when there are 80 characters of the line. But it do
   "autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
   "autocmd BufEnter * match OverLength /\%80v.*/
 "augroup END
+"
+"Matchit for octave.
+let s:conditionalEnd = '\(([^()]*\)\@!\<end\>\([^()]*)\)\@!'
+let b:match_words = '\<if\>\|\<while\>\|\<for\>\|\<switch\>:' .
+       \ s:conditionalEnd . ',\<if\>:\<elseif\>:\<else\>:' . s:conditionalEnd
