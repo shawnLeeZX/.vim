@@ -22,4 +22,8 @@ if has("autocmd") && exists("+omnifunc")
    \	endif 
 endif 
 
+" Use the NeoComplete to do autocomplete
 NeoCompleteEnable
+
+" compilation for octave.
+set makeprg=octave\ %
