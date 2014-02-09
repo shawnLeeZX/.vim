@@ -73,3 +73,7 @@ let g:tlTokenList = ["FIXME", "TODO", "XXX", "DRAFT"]
 let g:neocomplete#enable_at_startup = 0
 " ======================================================
 
+" For ~/.vim/bundle/LaTeX-Box/
+" ======================================================
+let g:LatexBox_Folding = 1
+" ======================================================
