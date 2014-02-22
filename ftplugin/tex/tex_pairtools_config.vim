@@ -15,7 +15,7 @@ let g:pairtools_tex_jigsaw    = 1
 " Configure PairClamp
 let g:pairtools_tex_autoclose  = 1
 let g:pairtools_tex_forcepairs = 0
-let g:pairtools_tex_closepairs = "(:),[:],{:},\":\""
+let g:pairtools_tex_closepairs = "(:),[:],{:},\":\",$:$"
 let g:pairtools_tex_smartclose = 1
 let g:pairtools_tex_smartcloserules = '\w,(,&,\*'
 let g:pairtools_tex_apostrophe = 0
