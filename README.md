@@ -16,6 +16,19 @@ languages:
 * Ant
 * Arduino
 
+When using ctags to generate tags for c/c++, adding the following options letting
+ctags gathers more informations.
+
+```bash
+ctags -R --c++-kinds=+p --fields=+iaS --extra=+q
+```
+
+To see what nickname is for what kinds, use the following command:
+
+```bash
+ctags --list-kinds
+```
+
 And it has some support for the following languages(Since I do not program in
 those languages a lot, I am not sure they are satisfactory or not):
 
