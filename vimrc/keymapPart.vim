@@ -24,7 +24,7 @@ vnoremap <Leader>d "+d
 "toggle tagbar
 nnoremap <F3> :TagbarToggle<CR>
 "toggle nerdtree
-nnoremap <F4> :NERDTree<CR>
+nnoremap <F4> :NERDTreeToggle<CR>
 "toggle eclipse project tree
 nnoremap <C-F3> :ProjectTreeToggle<CR>
 "toggle visual undo tree
