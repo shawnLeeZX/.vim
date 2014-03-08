@@ -1,7 +1,5 @@
-"set makeprg=make\ -C\ ./build
-set tw=80  "auto change line when there are 80 characters of the line. But it does not work.
-
-" Expand tab to space.
+" Intentation.
+set tw=80
 set expandtab
 set softtabstop=2
 set tabstop=2

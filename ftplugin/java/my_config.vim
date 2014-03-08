@@ -1,4 +1,9 @@
-set tw=80  "auto change line when there are 80 characters of the line. But it does not work.
+" Intentation.
+set tw=80
+set expandtab
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
 
 "This will highlight all characters past 74 columns (tweak that number as desired)
 "in dark grey (tweak that color as desired), 
