@@ -77,3 +77,10 @@ let g:neocomplete#enable_at_startup = 0
 " ======================================================
 let g:LatexBox_Folding = 1
 " ======================================================
+
+" For ~/.vim/ftplugin/python/
+" ======================================================
+" Do not quick fix windows since it is not necessary and conflicts with
+" vim-airline.
+let g:pyflakes_use_quickfix = 0
+" ======================================================
