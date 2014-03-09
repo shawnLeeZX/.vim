@@ -61,6 +61,21 @@
 "
 " let g:pydoc_highlight=0
 "
+" If you want pydoc to switch to an already open tab with pydoc page,
+" set this variable in your .vimrc (uses drop - requires vim compiled with
+" gui!):
+"
+" let g:pydoc_use_drop=1
+"
+" Pydoc files are open with 10 lines height, if you want to change this value
+" put this in your .vimrc:
+"
+" let g:pydoc_window_lines=15
+" or
+" let g:pydoc_window_lines=0.5
+"
+" Float values specify a percentage of the current window.
+"
 "
 " In order to install pydoc.vim download it from vim.org or clone the repository
 " on githubi and put it in your .vim/ftplugin directory. pydoc.vim is also fully
@@ -105,13 +120,26 @@ endif
 setlocal switchbuf=useopen
 highlight pydoc cterm=reverse gui=reverse
 
-function s:ShowPyDoc(name, type)
+function! s:GetWindowLine(value)
+    if a:value < 1
+        return float2nr(winheight(0)*a:value)
+    else
+        return a:value
+    endif
+endfunction
+
+" Args: name: lookup; type: 0: search, 1: lookup
+function! s:ShowPyDoc(name, type)
     if a:name == ''
         return
     endif
 
     if g:pydoc_open_cmd == 'split'
-        let l:pydoc_wh = 10
+        if exists('g:pydoc_window_lines')
+            let l:pydoc_wh = s:GetWindowLine(g:pydoc_window_lines)
+        else
+            let l:pydoc_wh = 10
+        endif
     endif
 
     if bufloaded("__doc__")
@@ -122,12 +150,16 @@ function s:ShowPyDoc(name, type)
             let l:pydoc_wh = -1
         else
             " If the __doc__ buffer is open, jump to it
-            silent execute "sbuffer" bufnr("__doc__")
+            if exists("g:pydoc_use_drop")
+                execute "drop" "__doc__"
+            else
+                execute "sbuffer" bufnr("__doc__")
+            endif
             let l:pydoc_wh = -1
         endif
     else
         let l:buf_is_new = 1
-        silent execute g:pydoc_open_cmd '__doc__'
+        execute g:pydoc_open_cmd '__doc__'
         if g:pydoc_perform_mappings
             call s:PerformMappings()
         endif
@@ -138,21 +170,26 @@ function s:ShowPyDoc(name, type)
     setlocal buftype=nofile
     setlocal bufhidden=delete
     setlocal syntax=man
+    setlocal nolist
 
-    silent normal ggdG
+    normal ggdG
     " Remove function/method arguments
     let s:name2 = substitute(a:name, '(.*', '', 'g' )
     " Remove all colons
     let s:name2 = substitute(s:name2, ':', '', 'g' )
     if a:type == 1
-        execute  "silent read !" g:pydoc_cmd s:name2
+        let s:cmd = g:pydoc_cmd . ' ' . shellescape(s:name2)
     else
-        execute  "silent read !" g:pydoc_cmd "-k" s:name2
+        let s:cmd = g:pydoc_cmd . ' -k ' . shellescape(s:name2)
     endif
+    if &verbose
+        echomsg "pydoc: calling " s:cmd
+    endif
+    execute  "silent read !" s:cmd
     normal 1G
 
     if exists('l:pydoc_wh') && l:pydoc_wh != -1
-        execute "silent resize" l:pydoc_wh
+        execute "resize" l:pydoc_wh
     end
 
     if g:pydoc_highlight == 1
@@ -176,15 +213,30 @@ function s:ShowPyDoc(name, type)
     endif
 endfunction
 
+function! s:ExpandModulePath()
+    " Extract the 'word' at the cursor, expanding leftwards across identifiers
+    " and the . operator, and rightwards across the identifier only.
+    "
+    " For example:
+    "   import xml.dom.minidom
+    "           ^   !
+    "
+    " With the cursor at ^ this returns 'xml'; at ! it returns 'xml.dom'.
+    let l:line = getline(".")
+    let l:pre = l:line[:col(".") - 1]
+    let l:suf = l:line[col("."):]
+    return matchstr(pre, "[A-Za-z0-9_.]*$") . matchstr(suf, "^[A-Za-z0-9_]*")
+endfunction
+
 " Mappings
-function s:PerformMappings()
+function! s:PerformMappings()
     nnoremap <silent> <buffer> <Leader>pw :call <SID>ShowPyDoc('<C-R><C-W>', 1)<CR>
     nnoremap <silent> <buffer> <Leader>pW :call <SID>ShowPyDoc('<C-R><C-A>', 1)<CR>
     nnoremap <silent> <buffer> <Leader>pk :call <SID>ShowPyDoc('<C-R><C-W>', 0)<CR>
     nnoremap <silent> <buffer> <Leader>pK :call <SID>ShowPyDoc('<C-R><C-A>', 0)<CR>
 
     " remap the K (or 'help') key
-    nnoremap <silent> <buffer> K :call <SID>ShowPyDoc(expand("<cword>"), 1)<CR>
+    nnoremap <silent> <buffer> K :call <SID>ShowPyDoc(<SID>ExpandModulePath(), 1)<CR>
 endfunction
 
 if g:pydoc_perform_mappings
@@ -192,5 +244,5 @@ if g:pydoc_perform_mappings
 endif
 
 " Commands
-command -nargs=1 Pydoc       :call s:ShowPyDoc('<args>', 1)
-command -nargs=* PydocSearch :call s:ShowPyDoc('<args>', 0)
+command! -nargs=1 Pydoc       :call s:ShowPyDoc('<args>', 1)
+command! -nargs=* PydocSearch :call s:ShowPyDoc('<args>', 0)
