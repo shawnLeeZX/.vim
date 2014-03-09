@@ -7,12 +7,6 @@ let g:tex_nine_config = {
 
 " ======================================================
 
-" For ~/.vim/bundle/lookupfile-1.8/
-" ======================================================
-nmap <unique> <silent> <Leader>o <Plug>LookupFile
-imap <unique> <silent> <Leader>o <C-O><Plug>LookupFile
-" ======================================================
-
 " For ~/.vim/bundle/better-snipmate-snippets/
 " ======================================================
 " The following comments describe what changes have been made.
@@ -76,6 +70,11 @@ let g:neocomplete#enable_at_startup = 0
 " For ~/.vim/bundle/LaTeX-Box/
 " ======================================================
 let g:LatexBox_Folding = 1
+" ======================================================
+
+" For ~/.vim/bundle/Command-T/
+" ======================================================
+nnoremap <Leader>o :CommandT<Cr>
 " ======================================================
 
 " For python in ~/.vim/ftplugin/python/
