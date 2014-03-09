@@ -82,3 +82,15 @@ plugin. It does have some parts that need to be compiled. Go to your
 
 Actually, this is a advanced vim user plugin. Follow the instructions in
 Command-T's README.txt to install it.
+
+### Ack
+This plugin is a front for the Perl module App::Ack.  Ack can be used as a
+replacement for grep.  This plugin will allow you to run ack from vim, and
+shows the results in a split window.
+
+You have to install [ack](http://betterthangrep.com/), of course.
+
+Install on Debian / Ubuntu with:
+```bash
+sudo apt-get install ack-grep
+```
