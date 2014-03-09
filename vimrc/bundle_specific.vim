@@ -78,9 +78,12 @@ let g:neocomplete#enable_at_startup = 0
 let g:LatexBox_Folding = 1
 " ======================================================
 
-" For ~/.vim/ftplugin/python/
+" For python in ~/.vim/ftplugin/python/
 " ======================================================
-" Do not quick fix windows since it is not necessary and conflicts with
-" vim-airline.
+" Do not use quick fix windows of pyflakes since it is not necessary and
+" conflicts with vim-airline.
 let g:pyflakes_use_quickfix = 0
+
+" Change pep8 validation kepmap to <Leader>v.
+let g:pep8_map = '<Leader>v'
 " ======================================================
