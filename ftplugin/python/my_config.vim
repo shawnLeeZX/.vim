@@ -1,6 +1,7 @@
 " Intentation
 " ==========================================
 " Make tab expand to space
+set tw=80
 set expandtab
 " How width a tab should be
 set tabstop=4
