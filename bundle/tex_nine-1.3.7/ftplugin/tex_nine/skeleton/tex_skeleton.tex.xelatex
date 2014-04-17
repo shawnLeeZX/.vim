@@ -10,7 +10,7 @@
 \usepackage{xeCJK}
 \usepackage{minted}
 \usepackage{booktabs}
-\usepackage{amsmath}
+\usepackage{mathtools}
 \usepackage{paralist}
 \usepackage[colorlinks=true,linkcolor=red]{hyperref}
 % \usepackage{hyperref}
