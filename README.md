@@ -83,12 +83,14 @@ plugin. It does have some parts that need to be compiled. Go to your
 Actually, this is a advanced vim user plugin. Follow the instructions in
 Command-T's README.txt to install it.
 
-### EasyGrep
-EasyGrep's main goal is to make search and replace in files easy.  Other Vim
-plugins provide similar functionality, but few provide the same level of
-functionality with as little configuration as EasyGrep does.  In the common
-case, all it takes to search for a string across multiple files is three
-keypresses: <leader>vv.  No clicks, no commands, no project/tags setup -- just
-three keys.  When you need a substitution, it also takes the same number of
-keys to start a replace in files.  After using EasyGrep, you'll wonder at how
-you got around without it.
+### DirDo
+- Performs Vim commands over files recursively under multiple
+directories.
+
+- This plugin is like :argdo but it works recursively under a directory (or
+multiple directories).  The limitation for :argdo is that it does not glob
+the files inside the subdirectories.  DirDo works in a similar manner but
+you're allowed to specify multiple directories (good for refactoring code
+and modifying files in a deep hierarchy).  DirDo also globs the files in
+"   the subdirectories so you can make sure an operation is performed
+"   consistantly.
