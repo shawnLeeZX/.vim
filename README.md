@@ -4,6 +4,8 @@ self-compiled, thus if you use one from your system's distribution's source, it
 may bring up some warning that some of feature may not be avaible, however,
 most of them functions well.
 
+If you find this useful, please star this repo!
+
 ## Full-fledged configs
 Currently, I have almost satisfactory config(at least for me) for the following
 languages:
