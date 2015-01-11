@@ -1,8 +1,9 @@
 % vim:tw=72 sw=2 ft=tex
-%         File: thoughts_report.tex
-% Date Created: 2013 Jun 18
-%  Last Change: 2013 Dec 10
-%       Author: hhiker
+%         File: ${_file}
+% Date Created: ${_date_created}
+%  Last Change: 
+%     Compiler: latex
+%       Author: ${_author}
 \documentclass[a4paper]{article}
 \usepackage{pdfpages}
 \usepackage{xltxtra}
